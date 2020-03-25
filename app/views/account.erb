@@ -10,6 +10,7 @@
       <h1>User Data:</h1>
       <%= @user.username %>
       <%= @user.balance %>
-    <a href="/logout">Log Out</a>
+    <% else %>
+      <a href="/logout">Log Out</a>
   </body>
 </html>

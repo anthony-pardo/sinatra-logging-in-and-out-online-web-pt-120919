@@ -8,9 +8,11 @@
   <body id="page-top">
     <% if is_logged_in?(session) %>
       <h1>User Data:</h1>
-      <%= @user.username %>
-      <%= @user.balance %>
-    <% else %>
+      <%= current_user(session).username %>
+      <%= current_user(session).balance %>
       <a href="/logout">Log Out</a>
+    <% else %>
+      <a href="/">Home</a>
+    <% end %>
   </body>
 </html>
